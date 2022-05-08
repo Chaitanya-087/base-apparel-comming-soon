@@ -7,17 +7,17 @@ const error_message = document.querySelector('.error-message');
 //paper @ company . ac .in
 form.addEventListener('submit',e => {
     e.preventDefault();
-    const re = new RegExp("/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/")
+    const re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
     const userinput = document.querySelector('input');
-    if ( ! re.test(String(userinput.value).toLowerCase()))
+    if (re.test(userinput.value))
     {
-        form.classList.add('error-border');
-        error_image.classList.remove('hide');
-        error_message.classList.remove('hide');
-    }
-    else{
         form.classList.remove('error-border');
         error_image.classList.add('hide');
         error_message.classList.add('hide');
+    }
+    else{
+        form.classList.add('error-border');
+        error_image.classList.remove('hide');
+        error_message.classList.remove('hide');
     }
 })

@@ -8,181 +8,196 @@
     box-sizing: border-box;
 }
 
+.clr-grey {
+    color: grey;
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+
+.fw-400 {
+    font-weight: 400;
+}
+
+.fw-600 {
+    font-weight: 700;
+}
+
+.fs-16 {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.fs-large {
+    font-size: 3.5rem;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.clr-desaturatedred {
+    color: hsl(0 36% 70%);
+}
+
+.clr-drakgreyishred {
+    color: hsl(0, 6%, 24%);
+}
+
 body {
     min-height: 100vh;
     font-family: 'Josefin Sans', sans-serif;
 }
 
 .container {
-    display: grid;
-    grid-template-rows: 1fr 2fr 3fr;
-    height: 100vh;
+    position: relative;
+    top: 0;
+    left: 0;
 }
 
-.log {
-    padding: 1.5rem;
-    display: flex;
-    align-items: center;
+.logo {
+    margin-left: 2rem;
+    position: absolute;
+    top: 5vh;
+    z-index: 1;
 }
 
-.heading {
-    font-size: 3.5rem;
-    line-height: 1;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: hsl(0, 6%, 24%);
+.logo > img{
+    width: 150px;
 }
 
-.swag {
-    color: hsl(0 36% 70%);
-    font-weight: 300;
-
-}
 
 .img-container {
+    position: absolute;
+    top:15vh;
     background: url(./images/hero-mobile.jpg);
     background-position: top left;
     background-repeat: no-repeat;
     width: 100vw;
-    height: 300px;
+    height: 40vh;
     background-size: cover;
 }
 
 .col1 {
+    position: absolute;
+    top: 55vh;
     display: flex;
     flex-direction: column;
-    padding: 2.5rem;
-    background: hsl(0, 100%, 99%) url(./images/bg-pattern-desktop.svg);
+    padding: 3.5rem 2.4rem;
+    background:  url(./images/bg-pattern-desktop.svg);
     background-size: cover;
+    background-repeat:no-repeat;
+}
+
+.col1-data {
     text-align: center;
 }
 
 .description {
-    margin-bottom: 1rem;
-}
-
-.col1 p {
-    color: hsl(0 36% 70%);
-    line-height: 1.5;
     margin-bottom: 1.5rem;
 }
 
-input::placeholder {
-    color: hsl(0 36% 70%)
-}
-
-input {
-    border: none;
-    background-color: transparent;
-}
-
-input:focus {
-    outline: none;
-}
-
-.form {
+form {
     border: 1px solid hsl(0 36% 70%);
+    position: relative;
     display: flex;
     height: 2.8rem;
     border-radius: 24px;
 }
 
 input {
-    flex: 4;
-    border-radius: 24px 0 0 24px;
+    border-style: none;
+    background-color: transparent;
+    padding-left:1rem;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    align-self: center;
+    height: 100%;
+    border-radius:24px;
 }
 
+input::placeholder {
+    color: hsl(0 36% 70%);
+    font-size: 16px;
+}
 
-.form button {
-    flex: 1;
+input:focus {
+    outline: none;
+}
+
+form button {
     border-style: none;
     border-radius: 20px;
     background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
-    box-shadow: 0 8px 24px 0 rgb(234, 198, 198);
+    box-shadow: 0 10px 25px 0 rgb(234, 198, 198);
     cursor: pointer;
-
-}
-
-.clr-grey {
-    color: grey;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 25%;
 }
 
 @media (min-width:992px) {
-    .container {
-        grid-template-columns: 60% 40%;
-        grid-template-rows: 100%;
-    }
-
-    .img-container {
+    .img-container{
         background: url(./images/hero-desktop.jpg);
         background-repeat: no-repeat;
         background-size: cover;
+        object-fit: contain;
         background-position: top left;
-    }
-
-    .img-container {
-        width: 100%;
+        right: 0;
+        width: 40vw;
         height: 100vh;
-        grid-area: 1/2/3/3;
+        top: 0;
     }
-
-    .col1 {
+    .title{
+        margin-bottom: 1.5rem;
+    }
+    .col1{
+        left: 0;
+        height: 100vh;
+        top: 0;
+        width: 60vw;
         display: flex;
         justify-content: center;
-        padding: 3.5rem;
-
     }
-
-    .heading {
-        letter-spacing: 1rem;
-        line-height: 1.1;
-    }
-
-    p.description {
-        font-size: 16px;
-        margin-bottom: 2rem;
-    }
-
-    h1:nth-of-type(2) {
-        margin-bottom: 1rem;
-    }
-
-    .log {
-        position: absolute;
-        margin-top: 5rem;
-        margin-left: 12rem;
-    }
-
-    .col1-data {
-        display: flex;
-        flex-direction: column;
+    .col1-data{
         text-align: left;
-        width: 53%;
+        width: 48%;
         margin-left: 10rem;
     }
-    input{
-        flex: 3;
+    .logo{
+        position: absolute;
+        top: 10vh;
+        left: 10.5rem;
     }
+    .description{
+        margin-bottom: 1.5rem;
+    }
+    .fs-large{
+        letter-spacing: 1rem;
+    }
+
 }
 
-.error{
-    margin-right:1rem;
+
+/* active states */
+.error {
+    margin-right: 1rem;
     align-self: center;
+    position: absolute;
+    right: 22%;
 }
 
-.hide{
+.hide {
     display: none;
 }
 
-.error-border{
+.error-border {
     border: 1px solid hsl(0, 93%, 68%) !important;
 }
 
-.form{
-    position: relative;
-}
-
-.error-message{
+.error-message {
     position: absolute;
     top: 115%;
     left: 5%;

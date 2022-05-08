@@ -1,53 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="index.css" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
 
-    <title>Frontend Mentor | Base Apparel coming soon page</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+</head>
 
-  <body>
+<body>
+  <main class="body-wrapper">
+
     <div class="container">
-      <div class="log">
+
+      <div class="logo">
         <img src="./images/logo.svg" alt="logo" />
       </div>
+
       <div class="img-container"></div>
+
       <div class="col1">
-        <div class="col1-data">
-          <div>
-            <h1 class="heading swag">We're</h1>
-            <h1 class="heading">Coming soon</h1>
+        <div class="col1-data">      
+          <div  class="title">
+            <h1 class="fs-large fw-300 clr-desaturatedred">We're</h1>
+            <h1 class="fs-large clr-drakgreyishred">Coming soon</h1>
           </div>
-          <p class="description">
+
+          <p class="fs-16 clr-desaturatedred description">
             Hello fellow shoppers! We're currently building our new fashion
             store. Add your email below to stay up-to-date with announcements
             and our launch deals.
           </p>
-            <form class="form">
-              <input
-                type="email"
-                placeholder="Email Address"
-                id="email"
-                name="email"
-                class="clr-grey"
-              />
-              <span class="error hide"><img src="./images/icon-error.svg"></span>
-              <span class="error-message hide">Please provide a valid email</span>
-              <button type="submit">
-                <img src="./images/icon-arrow.svg" alt="arrow" />
-              </button>
-            </form>
+
+          <form>
+            <input type="email" placeholder="Email Address" id="email" name="email" class="clr-grey fs-16" />
+            <span class="error hide"><img src="./images/icon-error.svg"></span>
+            <span class="error-message hide">Please provide a valid email</span>
+            <button type="submit">
+              <img src="./images/icon-arrow.svg" alt="arrow" />
+            </button>
+          </form>
         </div>
       </div>
+
     </div>
-    <script src="index.js"></script>
-  </body>
+
+  </main>
+  <script src="index.js"></script>
+</body>
+
 </html>
