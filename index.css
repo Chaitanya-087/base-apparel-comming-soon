@@ -132,7 +132,7 @@ form button {
     border-style: none;
     border-radius: 20px;
     background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
-    box-shadow: 0 10px 25px 0 rgb(234, 198, 198);
+    box-shadow: 0 12px 25px 1px rgb(234, 198, 198);
     cursor: pointer;
     position: absolute;
     right: 0;
@@ -148,7 +148,7 @@ form button {
         object-fit: contain;
         background-position: top left;
         right: 0;
-        width: 40vw;
+        width: 42vw;
         height: 100vh;
         top: 0;
     }
@@ -159,9 +159,10 @@ form button {
         left: 0;
         height: 100vh;
         top: 0;
-        width: 60vw;
+        width: calc(100vw - 42vw);
         display: flex;
         justify-content: center;
+        background-color:linear-gradient(135deg,hsl(0, 80%, 86%), hsl(0, 74%, 74%)) ;
     }
     .col1-data{
         text-align: left;
@@ -170,7 +171,7 @@ form button {
     }
     .logo{
         position: absolute;
-        top: 10vh;
+        top: 12vh;
         left: 10.5rem;
     }
     .description{
